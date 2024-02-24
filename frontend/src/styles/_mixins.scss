@@ -1,0 +1,13 @@
+@use "vars" as *;
+
+@mixin for-tablet-only {
+  @media (max-width: 768px), (max-height: 769px) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px), (max-height: 600px) {
+    @content;
+  }
+}

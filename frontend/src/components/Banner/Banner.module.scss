@@ -1,0 +1,25 @@
+@use "src/styles/mixins" as *;
+
+.banner {
+  background-image: linear-gradient(rgba(#101011, 0.4), rgba(#101011, 1)),
+    url("/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 4rem;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include for-phone-only {
+    .bannerText {
+      text-align: center;
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  p {
+    margin: 0 0 1rem 0;
+  }
+}

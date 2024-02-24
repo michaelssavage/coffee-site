@@ -1,0 +1,58 @@
+@use "src/styles/vars" as *;
+@use "src/styles/mixins" as *;
+
+.card {
+  position: relative;
+  padding: 2rem 1rem;
+  background-color: $background;
+  border-radius: 0.25rem;
+  text-align: center;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 {
+    margin-top: 2rem;
+    color: $card-text;
+    font-size: 1.2rem;
+  }
+  button {
+    cursor: default;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.6rem;
+    padding: 0.25rem 1rem;
+  }
+  &:nth-child(odd) {
+    button {
+      background-color: $arabic-blue;
+    }
+  }
+  &:nth-child(even) {
+    button {
+      background-color: $robusta-grey;
+    }
+  }
+  .description {
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+  }
+  .price {
+    font-size: 0.8rem;
+    color: $white;
+  }
+
+  @include for-phone-only {
+    h3,
+    .price {
+      font-size: 1.2rem;
+    }
+    button {
+      top: 1rem;
+      left: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}

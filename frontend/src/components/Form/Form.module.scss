@@ -1,0 +1,112 @@
+@use "src/styles/vars" as *;
+@use "src/components/Button/Button.module" as *;
+@use "sass:color";
+@use "src/styles/mixins" as *;
+
+.formContainer {
+  margin: 1rem;
+  position: relative;
+
+  .coffeeBeans {
+    position: absolute;
+    bottom: -7rem;
+    left: -5rem;
+    overflow: hidden;
+    transform: rotate(-20deg);
+    @include for-phone-only {
+      display: none;
+    }
+  }
+}
+
+.firstRowGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  @include for-phone-only {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.coffeeTypeGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  @include for-phone-only {
+    flex-direction: column;
+  }
+
+  .invertedButton {
+    @extend .button;
+    background-color: $background;
+    border: 2px solid $bronze;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.flexNameContainer {
+  @extend .inputContainer;
+  flex: 3;
+}
+
+.flexPriceContainer {
+  @extend .inputContainer;
+  flex: 1;
+}
+
+.currencyWrap {
+  position: relative;
+  width: 100%;
+  span {
+    color: $white;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+}
+
+.inputBox {
+  color: $white;
+  border: 1px solid $input-border;
+  background-color: $input-content;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  ::placeholder {
+    color: $input-border;
+  }
+}
+
+.numberBox {
+  @extend .inputBox;
+  width: 100%;
+}
+
+.inputButton {
+  @extend .inputBox;
+  cursor: pointer;
+  background-color: $background;
+  flex: 1;
+}
+
+.activeButton {
+  @extend .inputButton;
+  border: 1px solid $white;
+  color: $white;
+}

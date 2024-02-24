@@ -1,0 +1,50 @@
+@use "src/styles/vars" as *;
+
+.container {
+  display: flex;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  $width: 140px;
+  $border-thickness: 16px;
+  width: $width;
+  height: $width;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: $gray3;
+  padding: $border-thickness + 5;
+  line-height: 1rem;
+  user-select: none;
+  &:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $width;
+    height: $width;
+    margin-top: calc($width / -2);
+    margin-left: calc($width / -2);
+    border-radius: 50%;
+    border: $border-thickness solid $gray3;
+    border-top-color: $gray;
+    animation: spinner 0.9s ease infinite;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

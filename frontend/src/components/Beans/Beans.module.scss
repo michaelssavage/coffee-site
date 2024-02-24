@@ -1,0 +1,13 @@
+.bean {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  z-index: 4;
+}
+
+@for $i from 1 through 4 {
+  .bean:nth-child(#{$i}) {
+    right: 26% * ($i - 1);
+    transform: rotateZ(#{if($i % 4 == 1, 0, 180 * ($i % 4))}deg);
+  }
+}

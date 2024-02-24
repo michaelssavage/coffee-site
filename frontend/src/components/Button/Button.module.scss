@@ -1,0 +1,17 @@
+@use "sass:color";
+@use "src/styles/vars" as *;
+
+.button {
+  color: $white;
+  background-color: $bronze;
+  font-size: 0.8rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  &:hover {
+    background-color: color.scale($bronze, $blackness: 15%);
+  }
+}

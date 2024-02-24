@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$gray: #e8e8e8;
+$gray2: #c4c4c4;
+$gray3: color.scale($gray, $lightness: -30%);
+
+$white: #fafffc;
+$bronze: #ba8039;
+$card-text: #d3ad7f;
+
+$page: #101011;
+$background: #191919;
+$text: #938e8e;
+
+$input-border: #838382;
+$input-content: #2d2d2d;
+
+$red: #ff4949;
+$green: #2ba22b;
+
+$arabic-blue: #77a9b0;
+$robusta-grey: #3a383d;

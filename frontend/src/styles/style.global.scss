@@ -1,0 +1,70 @@
+@use "defaults" as *;
+@use "vars" as *;
+@use "mixins" as *;
+
+body {
+  background: $page;
+}
+
+.bebas {
+  font-family: var(--font-bebas);
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @extend .bebas;
+  color: $white;
+}
+
+p,
+label {
+  @extend .poppins;
+  color: $text;
+}
+
+.error-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .error-message {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+.error-text {
+  color: rgb(194, 54, 54);
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+.col {
+  flex: 0 0 auto;
+  width: 33.333%;
+  padding: 1rem 0.75rem 0 0.75rem;
+  @include for-tablet-only {
+    width: 50%;
+  }
+  @include for-phone-only {
+    width: 100%;
+  }
+}

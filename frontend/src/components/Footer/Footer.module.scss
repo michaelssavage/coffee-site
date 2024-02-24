@@ -1,0 +1,31 @@
+@use "src/styles/mixins" as *;
+
+.footer {
+  background-image: url("/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  width: 100%;
+  min-height: 5vh;
+
+  h2 {
+    z-index: 3;
+    font-size: 6rem;
+    span {
+      margin-left: -0.5rem;
+      font-size: 3rem;
+    }
+
+    @include for-phone-only {
+      font-size: 4rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}

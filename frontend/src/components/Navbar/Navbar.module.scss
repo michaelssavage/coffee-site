@@ -1,0 +1,33 @@
+@use "src/styles/vars" as *;
+@use "src/styles/animations" as *;
+
+.scroll {
+  background-color: $background;
+  @include appear-animation(0, $duration: 0.75s, $color: $background);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+  .navItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 10%;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  h1 {
+    color: $white;
+    span {
+      font-size: 1.1rem;
+    }
+  }
+}

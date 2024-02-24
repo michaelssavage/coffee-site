@@ -1,0 +1,56 @@
+@use "sass:color";
+@use "src/styles/vars" as *;
+@use "src/styles/mixins" as *;
+@use "src/styles/animations" as *;
+
+.root {
+  background-color: $page;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+.container {
+  background-color: $background;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 2.5rem 2.5rem 4rem 2.5rem;
+  transform-origin: center center;
+  @include slide-in-animation(100px);
+  overflow-x: hidden;
+
+  @include for-phone-only {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    margin: 0 auto;
+    border-radius: 0;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .close {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+  }
+
+  .title {
+    color: $white;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 2rem;
+    @include for-phone-only {
+      font-size: 2rem;
+    }
+  }
+}
