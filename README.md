@@ -1,25 +1,32 @@
-# MVST Challenge
+# Coffee Site
 
-## Feedback
+This site was a coding interview challenge using PostgreSQL, Nest.js backend, and a Next.js frontend. 
+I used SCSS for styling and I learned how to use Nest.js and the new app router in Next.js for the first time.
 
-This challenge was a medium-sized ticket. I thought it was great having everything set up and ready to go initially.
+## Features
+- On starting the backend, it will seed the coffee items for you.
+- I created a form that appeared in a modal for creating new coffee items that saved to the backend.
+- I added nice animations to the navbar as you scroll and animations for displaying the modal.
+- I added a filter so that you could change between the different coffee types; Robusta and Arabic.
 
-I enjoyed using Postgres DB, Nestjs, and the new app router in Next.js for the first time. I thought they had great documentation to help learn so they were a great choice.
+## Running The App
 
-I did not like using Tailwind and Yarn so I replaced those with SCSS and NPM. Tailwind seemed long winded to read after adding many classes.
+1. Run Docker Desktop
+2. cd into the backend, and run `./scripts/start-dev-db.sh`.
+3. Run nest.js with `npm start`
+4. Run next.js with `npm run dev`
 
-### What would you improve if given more time?
+## Pages
 
-There are a few things I'd like to improve on, especially completing the extra points.
+Landing Screen
+![image](https://github.com/michaelssavage/coffee-site/assets/33690140/c8cba814-2ea6-4292-bf76-ea9bdf956f54)
 
-I added some unit tests to the frontend and backend but did not cover all possible tests but I would aim for 90-100% coverage with more time. I added 1 e2e test to nestjs but again, I would like to add more.
+Modal
+![image](https://github.com/michaelssavage/coffee-site/assets/33690140/292f5462-8b06-4f6e-84bb-ebea8b9a15d6)
 
-Animating the splash screen would have been ideal and also SEO friendliness could be improved too. Deployment would have been the cherry on top but I did not get around to this. I added some small animations but these could be improved upon.
+Coffee List
+![image](https://github.com/michaelssavage/coffee-site/assets/33690140/61b525cb-32dc-4eeb-acec-a69bd7625247)
 
-I'd like to add more validation for the form, like the number input accepting floating numbers.
+Footer
+![image](https://github.com/michaelssavage/coffee-site/assets/33690140/4c36a3e1-f2b3-4f08-a7d4-f045ff588cf2)
 
-### How was your experience doing this challenge?
-
-This was an interesting challenge, I learned a lot of new skills that I'm proud to develop and showcase here. Initially, there were a lot of technologies to get used to but once I found my groove I enjoyed it.
-
-This ate up a lot of my time. It was a week long task that I had to sacrifice time in other places for. I wanted to do well in this project, so I found the time and I ultimately think it was beneficial.
