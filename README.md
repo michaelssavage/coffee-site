@@ -1,6 +1,6 @@
 # Coffee Site
 
-This site is cloned froma  coding interview challenge I completed using PostgreSQL, Nest.js backend, and a Next.js frontend. 
+This site is cloned from a coding interview challenge I completed using PostgreSQL, Nest.js backend, and a Next.js frontend. 
 I used SCSS for styling and I learned how to use Nest.js and the new app router in Next.js for the first time.
 
 ## Features
